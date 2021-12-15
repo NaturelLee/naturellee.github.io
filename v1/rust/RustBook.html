@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rust Book | NaturelLee Blogs</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.png">
+    <meta name="description" content="Cease to upgrade, you cease to live!">
+    
+    <link rel="preload" href="/assets/css/0.styles.e422860a.css" as="style"><link rel="preload" href="/assets/js/app.e530fad6.js" as="script"><link rel="preload" href="/assets/js/2.154196f3.js" as="script"><link rel="preload" href="/assets/js/23.caed4163.js" as="script"><link rel="prefetch" href="/assets/js/10.3c7aaaee.js"><link rel="prefetch" href="/assets/js/11.823e21d9.js"><link rel="prefetch" href="/assets/js/12.7915c734.js"><link rel="prefetch" href="/assets/js/13.e5ccd42f.js"><link rel="prefetch" href="/assets/js/14.1c2be813.js"><link rel="prefetch" href="/assets/js/15.8a756e32.js"><link rel="prefetch" href="/assets/js/16.fc0c6c1f.js"><link rel="prefetch" href="/assets/js/17.f8956874.js"><link rel="prefetch" href="/assets/js/18.81a0d074.js"><link rel="prefetch" href="/assets/js/19.643d18c7.js"><link rel="prefetch" href="/assets/js/20.5a39f7a0.js"><link rel="prefetch" href="/assets/js/21.6cf4657c.js"><link rel="prefetch" href="/assets/js/22.63d899ac.js"><link rel="prefetch" href="/assets/js/24.1c897a7c.js"><link rel="prefetch" href="/assets/js/25.367a79c7.js"><link rel="prefetch" href="/assets/js/3.a0333aaa.js"><link rel="prefetch" href="/assets/js/4.44866e58.js"><link rel="prefetch" href="/assets/js/5.4decba1f.js"><link rel="prefetch" href="/assets/js/6.345d863d.js"><link rel="prefetch" href="/assets/js/7.592930ef.js"><link rel="prefetch" href="/assets/js/8.e49db229.js"><link rel="prefetch" href="/assets/js/9.cc6b3770.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e422860a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.png" alt="NaturelLee Blogs" class="logo"> <span class="site-name can-hide">NaturelLee Blogs</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FE" class="dropdown-title"><span class="title">FE</span> <span class="arrow down"></span></button> <button type="button" aria-label="FE" class="mobile-dropdown-title"><span class="title">FE</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/v1/fe/hooks.html" class="nav-link">
+  hooks
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/feInterview.html" class="nav-link">
+  前端面试题
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/webFrontEndTutorial.html" class="nav-link">
+  前端教程
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/reactImp.html" class="nav-link">
+  React性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/EverythingYouNeedtoKnowAboutDateinJavaScript.html" class="nav-link">
+  JS中的日期
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/postcss.html" class="nav-link">
+  Postcss实践
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/puppeteer.html" class="nav-link">
+  Puppeteer集成测试
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/sass.html" class="nav-link">
+  sass
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Server" class="dropdown-title"><span class="title">Server</span> <span class="arrow down"></span></button> <button type="button" aria-label="Server" class="mobile-dropdown-title"><span class="title">Server</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/v1/server/Restful.html" class="nav-link">
+  Restful
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Rust" class="dropdown-title"><span class="title">Rust</span> <span class="arrow down"></span></button> <button type="button" aria-label="Rust" class="mobile-dropdown-title"><span class="title">Rust</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/v1/rust/RustBook.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  The Book
+</a></li><li class="dropdown-item"><!----> <a href="/v1/rust/RustFirstClass.html" class="nav-link">
+  Rust编程第一课
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Read" class="dropdown-title"><span class="title">Read</span> <span class="arrow down"></span></button> <button type="button" aria-label="Read" class="mobile-dropdown-title"><span class="title">Read</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/v1/read/principles.html" class="nav-link">
+  原则
+</a></li><li class="dropdown-item"><!----> <a href="/v1/read/takeTimeAsFriends.html" class="nav-link">
+  把时间当做朋友
+</a></li><li class="dropdown-item"><!----> <a href="/v1/read/6monthEnglish.html" class="nav-link">
+  半年掌握一门外语
+</a></li><li class="dropdown-item"><!----> <a href="/v1/read/10StepstoBecomeaMillionairein5Years.html" class="nav-link">
+  如何成为百万富翁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Sparkling" class="dropdown-title"><span class="title">Sparkling</span> <span class="arrow down"></span></button> <button type="button" aria-label="Sparkling" class="mobile-dropdown-title"><span class="title">Sparkling</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/v1/theRightWayToBuildYourBlog.html" class="nav-link">
+  这才是搭建个人博客的正确姿
+</a></li><li class="dropdown-item"><!----> <a href="/v1/hackYourMemory.html" class="nav-link">
+  记忆宫殿
+</a></li><li class="dropdown-item"><!----> <a href="/v1/editorSkills.html" class="nav-link">
+  编辑器小技巧
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/NaturelLee/blogs/issues" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Contact
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FE" class="dropdown-title"><span class="title">FE</span> <span class="arrow down"></span></button> <button type="button" aria-label="FE" class="mobile-dropdown-title"><span class="title">FE</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/v1/fe/hooks.html" class="nav-link">
+  hooks
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/feInterview.html" class="nav-link">
+  前端面试题
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/webFrontEndTutorial.html" class="nav-link">
+  前端教程
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/reactImp.html" class="nav-link">
+  React性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/EverythingYouNeedtoKnowAboutDateinJavaScript.html" class="nav-link">
+  JS中的日期
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/postcss.html" class="nav-link">
+  Postcss实践
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/puppeteer.html" class="nav-link">
+  Puppeteer集成测试
+</a></li><li class="dropdown-item"><!----> <a href="/v1/fe/sass.html" class="nav-link">
+  sass
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Server" class="dropdown-title"><span class="title">Server</span> <span class="arrow down"></span></button> <button type="button" aria-label="Server" class="mobile-dropdown-title"><span class="title">Server</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/v1/server/Restful.html" class="nav-link">
+  Restful
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Rust" class="dropdown-title"><span class="title">Rust</span> <span class="arrow down"></span></button> <button type="button" aria-label="Rust" class="mobile-dropdown-title"><span class="title">Rust</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/v1/rust/RustBook.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  The Book
+</a></li><li class="dropdown-item"><!----> <a href="/v1/rust/RustFirstClass.html" class="nav-link">
+  Rust编程第一课
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Read" class="dropdown-title"><span class="title">Read</span> <span class="arrow down"></span></button> <button type="button" aria-label="Read" class="mobile-dropdown-title"><span class="title">Read</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/v1/read/principles.html" class="nav-link">
+  原则
+</a></li><li class="dropdown-item"><!----> <a href="/v1/read/takeTimeAsFriends.html" class="nav-link">
+  把时间当做朋友
+</a></li><li class="dropdown-item"><!----> <a href="/v1/read/6monthEnglish.html" class="nav-link">
+  半年掌握一门外语
+</a></li><li class="dropdown-item"><!----> <a href="/v1/read/10StepstoBecomeaMillionairein5Years.html" class="nav-link">
+  如何成为百万富翁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Sparkling" class="dropdown-title"><span class="title">Sparkling</span> <span class="arrow down"></span></button> <button type="button" aria-label="Sparkling" class="mobile-dropdown-title"><span class="title">Sparkling</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/v1/theRightWayToBuildYourBlog.html" class="nav-link">
+  这才是搭建个人博客的正确姿
+</a></li><li class="dropdown-item"><!----> <a href="/v1/hackYourMemory.html" class="nav-link">
+  记忆宫殿
+</a></li><li class="dropdown-item"><!----> <a href="/v1/editorSkills.html" class="nav-link">
+  编辑器小技巧
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/NaturelLee/blogs/issues" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Contact
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Rust Book</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/v1/rust/RustBook.html#_1-ownership" class="sidebar-link">1. Ownership</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_2-structs" class="sidebar-link">2. Structs</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_3-enum" class="sidebar-link">3. Enum</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_4-packages-crates-and-modules" class="sidebar-link">4. Packages, Crates and Modules</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_5-common-collections" class="sidebar-link">5. Common Collections</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_6-error-handling" class="sidebar-link">6. Error Handling</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_7-generic-types-traits-and-lifetimes" class="sidebar-link">7. Generic Types, Traits and Lifetimes</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_8-automated-tests" class="sidebar-link">8. Automated Tests</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_9-iterators-and-closures" class="sidebar-link">9. Iterators and Closures</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_10-cargo-crates-io" class="sidebar-link">10. Cargo , crates.io</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_11-smart-pointers" class="sidebar-link">11. Smart Pointers</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_12-concurrency" class="sidebar-link">12. Concurrency</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_13-oop" class="sidebar-link">13. OOP</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_14-patterns-and-matching" class="sidebar-link">14. Patterns and Matching</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_15-advanced-features" class="sidebar-link">15. Advanced Features</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_16-final-project-building-a-multithreaded-web-server" class="sidebar-link">16. Final Project: Building a Multithreaded Web Server</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/v1/rust/RustBook.html#_17-appendix" class="sidebar-link">17. Appendix</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="rust-book"><a href="#rust-book" class="header-anchor">#</a> Rust Book</h1> <p><a href="http://doc.rust-lang.org/book" target="_blank" rel="noopener noreferrer">doc.rust-lang.org/book<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="_1-ownership"><a href="#_1-ownership" class="header-anchor">#</a> 1. Ownership</h2> <ol><li>immutable variable can be many</li> <li>mutable variable only exist one at one time</li> <li>last usage ends, the variable scope ends</li> <li>reference is borrow</li></ol> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token comment">// String slice</span>
+<span class="token keyword">let</span> my_string <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span>“hello”<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> my_slice <span class="token operator">=</span> <span class="token operator">&amp;</span>my_string<span class="token punctuation">[</span><span class="token punctuation">..</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// Array slice</span>
+<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> a_slice <span class="token operator">=</span> <span class="token operator">&amp;</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">..</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="_2-structs"><a href="#_2-structs" class="header-anchor">#</a> 2. Structs</h2> <ol><li><p>Defination</p> <ol><li>struct User {email: String, name: String}/ struct User(String, String)(tuple struct)</li> <li>unit struct: struct UnitExample;</li></ol></li> <li><p>Instance</p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token keyword">let</span> user1 <span class="token operator">=</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+	name<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span>“naaa”<span class="token punctuation">)</span><span class="token punctuation">,</span>
+	email<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span>“eee”<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> user2 <span class="token operator">=</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span>“name”<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span>“email”<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> user3 <span class="token operator">=</span> <span class="token class-name">User</span><span class="token punctuation">{</span>
+	name<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span>“userss”<span class="token punctuation">)</span><span class="token punctuation">,</span>
+	<span class="token punctuation">..</span>user2
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>5.2 Examples</p> <ol><li>Use struct to structure data</li></ol> <p>5.3 Method Syntax</p> <ol><li>fn vs method
+<ol><li>fn ’s parameters are anything;</li> <li>method parameters: first is always self;</li> <li>method are defined in impl</li> <li>fn defined in impl don’t accept self, they are static/associate fn;</li></ol></li></ol></li></ol> <h2 id="_3-enum"><a href="#_3-enum" class="header-anchor">#</a> 3. Enum</h2> <ol><li><p>Defining an Enum</p> <ol><li><p>enum variant can be any kind</p></li> <li><p>enum variants are of the same type</p></li> <li><p>You can use Some(T)/None directly.</p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token keyword">enum</span> <span class="token type-definition class-name">Option</span><span class="token operator">&lt;</span><span class="token class-name">T</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Some</span><span class="token punctuation">(</span><span class="token class-name">T</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token class-name">None</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li></ol></li> <li><p>Match</p> <ol><li><p>if let is a syntax sugar when match matches the first arm and ignores the rest.</p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token comment">// match version</span>
+<span class="token keyword">let</span> <span class="token keyword">mut</span> count <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+<span class="token keyword">match</span> coin <span class="token punctuation">{</span>
+	<span class="token class-name">Coin</span><span class="token punctuation">::</span><span class="token class-name">Quater</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">&quot;State from {:?}&quot;</span><span class="token punctuation">,</span> state<span class="token punctuation">)</span><span class="token punctuation">,</span>
+	_ <span class="token operator">=&gt;</span> count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// if let version</span>
+<span class="token keyword">let</span> <span class="token keyword">mut</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token keyword">let</span> <span class="token class-name">Coin</span><span class="token punctuation">::</span><span class="token class-name">Quater</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=</span> coin <span class="token punctuation">{</span>
+	<span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">&quot;State from {:?}&quot;</span><span class="token punctuation">,</span> state<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+	count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div></li></ol></li></ol> <h2 id="_4-packages-crates-and-modules"><a href="#_4-packages-crates-and-modules" class="header-anchor">#</a> 4. Packages, Crates and Modules</h2> <ol><li><p>Cargo new my-project:</p> <ol><li>creates a package, can have multiple binary crates.</li> <li>with src/main.rs which is a binary crate.</li> <li>with src/lib.rs which is a library crate.</li> <li>files in src/bin/ are separate binary crate.</li> <li>src/main.rs and src/lib.rs are called crate roots</li> <li>Notice that the entire module tree is rooted under the implicit module named crate.</li></ol></li> <li><p><strong>Packages:</strong> A Cargo feature that lets you build, test, and share crates</p> <ol><li>A package is one or more crates that provide a set of functionality.</li> <li>A package contains a Cargo.toml file that describes how to build those crates.</li> <li>A package must contain zero or one library crates, and no more.</li> <li>It can contain as many binary crates.</li> <li>it must contain at least one crate (either library or binary).</li></ol></li> <li><p><strong>Crates:</strong> A tree of modules that produces a library or executable</p> <ol><li>A crate is a binary or library.</li> <li>Group related functionality together in a scope to share.</li> <li>Only crates get compiled.</li> <li>rustc --crate-type=lib <a href="http://rary.rs/" target="_blank" rel="noopener noreferrer">rary.rs<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> can override compile type.</li></ol> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token comment">// This crate is a library</span>
+<span class="token attribute attr-name">#![crate_type = <span class="token string">&quot;lib&quot;</span>]</span>
+<span class="token comment">// The library is named &quot;rary&quot;</span>
+<span class="token attribute attr-name">#![crate_name = <span class="token string">&quot;rary&quot;</span>]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p><strong>Modules</strong> and <strong>use:</strong> Let you control the organization, scope, and privacy of paths</p> <ol><li>define a module: mod your_mode_name {}</li> <li>Inside modules, we can have other modules</li> <li>child mod can use parent mod items, the otherwise can't.</li> <li>to make an item private, you put it in a mod.</li> <li>filename can be mod name.</li></ol></li> <li><p><strong>Paths:</strong> A way of naming an item, such as a struct, function, or module</p> <ol><li>the use keyword that brings a path into scope</li> <li>use crate::front_of_house::hosting; then you can use hosting::anything directly.</li> <li>relative path: use self::front_of_house::hosting;</li> <li>use std::io::Result as IoResult;</li> <li>use std::{cmp::Ordering, io}; use std::io::{self, Write}; use std::collections:😗;</li> <li>the pub keyword to make items public.</li> <li>pub use:</li></ol></li> <li><p>Organise your project:</p> <ol><li>touch src/test_fun.rs</li> <li>add <code>pub mod test_fun</code> in src/lib.rs</li> <li>add <code>use your_project::test_fun;</code> when you use it;</li></ol></li> <li><p>Attributes:</p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token comment">// apply to the whole crate</span>
+<span class="token attribute attr-name">#![crate_attribute]</span>
+
+<span class="token comment">// apply to module/item</span>
+<span class="token attribute attr-name">#[item_attribute]</span>
+
+<span class="token comment">// different syntaxes</span>
+<span class="token attribute attr-name">#[attribute = <span class="token string">&quot;value&quot;</span>]</span>
+<span class="token attribute attr-name">#[attribute(key=<span class="token string">&quot;value&quot;</span>)]</span>
+<span class="token attribute attr-name">#[attribute(value)]</span>
+
+<span class="token comment">// multiple values</span>
+<span class="token attribute attr-name">#[attribute(value, value2)]</span>
+
+<span class="token comment">// multiple lines</span>
+<span class="token attribute attr-name">#[attribute(value,
+value1, value2, value3)]</span>
+
+<span class="token comment">// ===DeadCode===</span>
+<span class="token attribute attr-name">#[allow(dead_code)]</span>
+<span class="token comment">// ===cfg===</span>
+<span class="token comment">// two different ways to use config</span>
+<span class="token comment">// 1. in attribute position</span>
+<span class="token attribute attr-name">#[cfg(target_os = <span class="token string">&quot;linux&quot;</span>)]</span>
+<span class="token attribute attr-name">#[cfg(not(target_os = <span class="token string">&quot;linux&quot;</span>))]</span>
+<span class="token comment">// 2. macro as a boolean expression</span>
+<span class="token keyword">if</span> <span class="token macro property">cfg!</span><span class="token punctuation">(</span>target_os <span class="token operator">=</span> <span class="token string">&quot;linux&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">...</span><span class="token punctuation">}</span>
+<span class="token comment">// custom cfg</span>
+<span class="token comment">// rustc --cfg some_condition should be used</span>
+<span class="token attribute attr-name">#[cfg(some_condition)]</span>
+<span class="token keyword">fn</span> <span class="token function-definition function">conditional_function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">&quot;condition met!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div></li></ol> <h2 id="_5-common-collections"><a href="#_5-common-collections" class="header-anchor">#</a> 5. Common Collections</h2> <ol><li><p>vector: <code>Vec&lt;T&gt;</code></p> <ol><li><code>let mut v: Vec&lt;i32&gt; = Vec::new()</code>;</li> <li><code>let mut v = vec![1, 2, 3]</code>;</li> <li><code>v.push(4)</code>;</li> <li><code>v.get(2) → option&lt;i32&gt;; let third: &amp;i32 = &amp;v[2]</code>;</li></ol></li> <li><p>string</p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token keyword">let</span> <span class="token keyword">mut</span> s <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+s<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token char string">'l'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+s<span class="token punctuation">.</span><span class="token function">push_str</span><span class="token punctuation">(</span><span class="token string">&quot;bar&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> ss <span class="token operator">=</span> <span class="token string">&quot;initial contents&quot;</span><span class="token punctuation">.</span><span class="token function">to_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> ss <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">&quot;initial contents&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// concatenation</span>
+<span class="token keyword">let</span> s1 <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">&quot;Hello, &quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> s2 <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">&quot;world!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> s3 <span class="token operator">=</span> s1 <span class="token operator">+</span> <span class="token operator">&amp;</span>s2<span class="token punctuation">;</span>
+<span class="token comment">// format!</span>
+<span class="token keyword">let</span> s <span class="token operator">=</span> <span class="token macro property">format!</span><span class="token punctuation">(</span><span class="token string">&quot;{}-{}&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">,</span> s2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// iteration</span>
+<span class="token keyword">for</span> c <span class="token keyword">in</span> <span class="token string">&quot;नमस्ते&quot;</span><span class="token punctuation">.</span><span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">&quot;{}&quot;</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">for</span> b <span class="token keyword">in</span> <span class="token string">&quot;नमस्ते&quot;</span><span class="token punctuation">.</span><span class="token function">bytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">&quot;{}&quot;</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div></li> <li><p>hash map</p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>collections<span class="token punctuation">::</span></span><span class="token class-name">HashMap</span><span class="token punctuation">;</span>
+<span class="token comment">// new</span>
+<span class="token keyword">let</span> <span class="token keyword">mut</span> scores <span class="token operator">=</span> <span class="token class-name">HashMap</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// insert</span>
+scores<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">&quot;Blue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+scores<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">&quot;Yellow&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// overwrite</span>
+scores<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">&quot;Blue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> team_name <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">&quot;Blue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// get</span>
+<span class="token keyword">let</span> score <span class="token operator">=</span> scores<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>team_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// iteration</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token operator">&amp;</span>scores <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">&quot;{}: {}&quot;</span><span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// or_insert</span>
+scores<span class="token punctuation">.</span><span class="token function">entry</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">&quot;Yellow&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">or_insert</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// not insert</span>
+scores<span class="token punctuation">.</span><span class="token function">entry</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">&quot;Green&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">or_insert</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// insert</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div></li></ol> <h2 id="_6-error-handling"><a href="#_6-error-handling" class="header-anchor">#</a> 6. Error Handling</h2> <ol><li><p>unrecoverable: panic!</p></li> <li><p>recoverable: <code>Result&lt;T, E&gt;</code></p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>fs<span class="token punctuation">::</span></span><span class="token class-name">File</span><span class="token punctuation">;</span>
+
+<span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> f <span class="token operator">=</span> <span class="token class-name">File</span><span class="token punctuation">::</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">&quot;hello.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> f <span class="token operator">=</span> <span class="token keyword">match</span> f <span class="token punctuation">{</span>
+        <span class="token class-name">Ok</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> file<span class="token punctuation">,</span>
+        <span class="token class-name">Err</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token macro property">panic!</span><span class="token punctuation">(</span><span class="token string">&quot;Problem opening the file: {:?}&quot;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// unwrap</span>
+		<span class="token keyword">let</span> f <span class="token operator">=</span> <span class="token class-name">File</span><span class="token punctuation">::</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">&quot;hello.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// expect</span>
+		<span class="token keyword">let</span> f <span class="token operator">=</span> <span class="token class-name">File</span><span class="token punctuation">::</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">&quot;hello.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">expect</span><span class="token punctuation">(</span><span class="token string">&quot;Failed to open hello.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// the ? Operator</span>
+<span class="token attribute attr-name">#![allow(unused)]</span>
+<span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>fs<span class="token punctuation">::</span></span><span class="token class-name">File</span><span class="token punctuation">;</span>
+	<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span></span>io<span class="token punctuation">;</span>
+	<span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>io<span class="token punctuation">::</span></span><span class="token class-name">Read</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">fn</span> <span class="token function-definition function">read_username_from_file</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token class-name">Result</span><span class="token operator">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token namespace">io<span class="token punctuation">::</span></span><span class="token class-name">Error</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+		<span class="token keyword">let</span> <span class="token keyword">mut</span> s <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">File</span><span class="token punctuation">::</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">&quot;hello.txt&quot;</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">read_to_string</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">mut</span> s<span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">Ok</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// only allowed to use the ? operator in a function that returns Result</span>
+<span class="token comment">// or Option or another type that implements std::ops::Try</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><ol start="3"><li>To panic or Not</li></ol> <p>it’s appropriate to panic in examples, prototype code, and tests.</p></li></ol> <h2 id="_7-generic-types-traits-and-lifetimes"><a href="#_7-generic-types-traits-and-lifetimes" class="header-anchor">#</a> 7. Generic Types, Traits and Lifetimes</h2> <ol><li><p>Traits: Define shared behavior.</p> <ol><li>trait 像是公共方法的模板</li></ol> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token comment">// trait</span>
+<span class="token keyword">pub</span> <span class="token keyword">trait</span> <span class="token class-name">Summary</span> <span class="token punctuation">{</span>
+    <span class="token keyword">fn</span> <span class="token function-definition function">summarize</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">self</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token class-name">String</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// default impl</span>
+<span class="token keyword">pub</span> <span class="token keyword">trait</span> <span class="token class-name">Summary</span> <span class="token punctuation">{</span>
+    <span class="token keyword">fn</span> <span class="token function-definition function">summarize</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">self</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token class-name">String</span> <span class="token punctuation">{</span>
+				<span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">&quot;(default impl of Summary)&quot;</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">impl</span> <span class="token class-name">Summary</span> <span class="token keyword">for</span> <span class="token class-name">NewsArticle</span> <span class="token punctuation">{</span>
+    <span class="token keyword">fn</span> <span class="token function-definition function">summarize</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">self</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token class-name">String</span> <span class="token punctuation">{</span>
+				<span class="token comment">// do something to override default impl</span>
+       <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// item impl Summary as parameter</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">notify</span><span class="token punctuation">(</span>item<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token keyword">impl</span> <span class="token class-name">Summary</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">&quot;Breaking news! {}&quot;</span><span class="token punctuation">,</span> item<span class="token punctuation">.</span><span class="token function">summarize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+↕️
+<span class="token comment">// trait bound</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">notify</span><span class="token operator">&lt;</span><span class="token class-name">T</span><span class="token punctuation">:</span> <span class="token class-name">Summary</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>item<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">T</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">&quot;Breaking news! {}&quot;</span><span class="token punctuation">,</span> item<span class="token punctuation">.</span><span class="token function">summarize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Multiple Trait Bounds</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">notify</span><span class="token punctuation">(</span>item<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token punctuation">(</span><span class="token keyword">impl</span> <span class="token class-name">Summary</span> <span class="token operator">+</span> <span class="token class-name">Display</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span> <span class="token keyword">fn</span> <span class="token function-definition function">notify</span><span class="token operator">&lt;</span><span class="token class-name">T</span><span class="token punctuation">:</span> <span class="token class-name">Summary</span> <span class="token operator">+</span> <span class="token class-name">Display</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>item<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">T</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token comment">// where</span>
+<span class="token keyword">fn</span> <span class="token function-definition function">some_function</span><span class="token operator">&lt;</span><span class="token class-name">T</span><span class="token punctuation">:</span> <span class="token class-name">Display</span> <span class="token operator">+</span> <span class="token class-name">Clone</span><span class="token punctuation">,</span> <span class="token class-name">U</span><span class="token punctuation">:</span> <span class="token class-name">Clone</span> <span class="token operator">+</span> <span class="token class-name">Debug</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>t<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">T</span><span class="token punctuation">,</span> u<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">U</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token keyword">i32</span> <span class="token punctuation">{</span>
+<span class="token keyword">fn</span> <span class="token function-definition function">some_function</span><span class="token operator">&lt;</span><span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token class-name">U</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>t<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">T</span><span class="token punctuation">,</span> u<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token class-name">U</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token keyword">i32</span>
+    <span class="token keyword">where</span> <span class="token class-name">T</span><span class="token punctuation">:</span> <span class="token class-name">Display</span> <span class="token operator">+</span> <span class="token class-name">Clone</span><span class="token punctuation">,</span>
+          <span class="token class-name">U</span><span class="token punctuation">:</span> <span class="token class-name">Clone</span> <span class="token operator">+</span> <span class="token class-name">Debug</span>
+<span class="token punctuation">{</span>
+
+<span class="token comment">// as return type</span>
+<span class="token keyword">fn</span> <span class="token function-definition function">returns_summarizable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token keyword">impl</span> <span class="token class-name">Summary</span> <span class="token punctuation">{</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><ol start="2"><li>Lifetimes</li></ol> <p>every reference in Rust has a lifetime, which is the scope for which that reference is valid</p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token comment">// Lifetime Annotation Syntax</span>
+<span class="token operator">&amp;</span>`a <span class="token keyword">mut</span> <span class="token keyword">i32</span>
+
+<span class="token comment">// In fn signatures</span>
+<span class="token keyword">fn</span> <span class="token function-definition function">longest</span><span class="token operator">&lt;</span><span class="token lifetime-annotation symbol">'a</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'a</span> <span class="token keyword">str</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'a</span> <span class="token keyword">str</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'a</span> <span class="token keyword">str</span> <span class="token punctuation">{</span>
+
+<span class="token comment">// In Struct Definitions</span>
+<span class="token keyword">struct</span> <span class="token type-definition class-name">ImportantExcerpt</span><span class="token operator">&lt;</span><span class="token lifetime-annotation symbol">'a</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    part<span class="token punctuation">:</span> <span class="token operator">&amp;</span><span class="token lifetime-annotation symbol">'a</span> <span class="token keyword">str</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Lifetime Elision Rules</span>
+<span class="token number">1</span><span class="token punctuation">.</span> input lifetimes<span class="token punctuation">:</span>
+	each reference parameter gets its own lifetime parameter
+<span class="token number">2</span><span class="token punctuation">.</span> output lifetimes<span class="token punctuation">:</span>
+	<span class="token number">1</span><span class="token punctuation">.</span> <span class="token keyword">if</span> there is one input lifetime parameter<span class="token punctuation">,</span>
+		that lifetime is assigned to all output lifetime parameters
+	<span class="token number">2</span><span class="token punctuation">.</span> <span class="token class-name">In</span> methods the lifetime of <span class="token keyword">self</span> is assigned to all output lifetime parameters
+
+<span class="token comment">// 'static</span>
+the lifetime of all string literals is <span class="token lifetime-annotation symbol">'static</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div></li></ol> <h2 id="_8-automated-tests"><a href="#_8-automated-tests" class="header-anchor">#</a> 8. Automated Tests</h2> <ol><li><p>How to write tests</p> <ol><li><p>the attribute: #[test] indicate the fn is a test function.</p></li> <li><p>assert!, assert_eq!, and assert_ne!</p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token attribute attr-name">#[test]</span>
+<span class="token attribute attr-name">#[should_panic(expected = <span class="token string">&quot;Guess value must be less than or equal to 100&quot;</span>)]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol></li> <li><p>Control how tests are run</p> <ol><li>$ cargo test -- --test-threads=1</li> <li>$ cargo test -- --show-output</li> <li>$ cargo test add // tests name contain add</li> <li><strong>#[ignore]</strong></li> <li>$ cargo test -- --ignored // only run ignored</li></ol></li> <li><p>Test Organization</p> <ol><li><p>unit tests</p> <ol><li><p>to test each unit of code in isolation to pinpoint code work as expected</p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token attribute attr-name">#[cfg(test)]</span>
+<span class="token keyword">mod</span> <span class="token module-declaration namespace">tests</span> <span class="token punctuation">{</span>
+    <span class="token attribute attr-name">#[test]</span>
+    <span class="token keyword">fn</span> <span class="token function-definition function">it_works</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token macro property">assert_eq!</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li></ol></li> <li><p>integration tests</p> <ol><li>can only call functions that are part of your library’s public API</li> <li>tests directory</li></ol> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>src<span class="token operator">|</span>
+		lib.rs
+		tests<span class="token operator">|</span>common<span class="token operator">|</span>mod.rs // common is a submod that any i t <span class="token function">file</span> can use
+		tests<span class="token operator">|</span>integration_test.rs
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol><li>Only library crates expose functions that other crates can use</li> <li>eprintln! print error on the screen.</li> <li>cargo run to poem.txt &gt; output.txt : store std::output to a file.</li></ol></li></ol></li></ol> <h2 id="_9-iterators-and-closures"><a href="#_9-iterators-and-closures" class="header-anchor">#</a> 9. Iterators and Closures</h2> <ol><li><p>Closures</p> <ol><li>thread::sleep(Duration::from_secs(2));</li></ol> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>struct Cacher<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span>
+where
+    T: Fn<span class="token punctuation">(</span>u32<span class="token punctuation">)</span> -<span class="token operator">&gt;</span> u32,// T is a closure
+<span class="token punctuation">{</span>
+    calculation: T,
+    value: Option<span class="token operator">&lt;</span>u3<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>,
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ol start="2"><li>Capturing the ENV</li></ol> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>fn <span class="token function-name function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin class-name">let</span> x <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+
+    // <span class="token keyword">if</span> changed to fn, it wil not compile
+    <span class="token builtin class-name">let</span> equal_to_x <span class="token operator">=</span> <span class="token operator">|</span>z<span class="token operator">|</span> z <span class="token operator">==</span> x<span class="token punctuation">;</span>
+
+    <span class="token builtin class-name">let</span> y <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+
+    assert<span class="token operator">!</span><span class="token punctuation">(</span>equal_to_x<span class="token punctuation">(</span>y<span class="token punctuation">))</span><span class="token punctuation">;</span>
+
+	  <span class="token builtin class-name">let</span> y <span class="token operator">=</span> vec<span class="token operator">!</span><span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token builtin class-name">let</span> equal_to_y <span class="token operator">=</span> move <span class="token operator">|</span>z<span class="token operator">|</span> z <span class="token operator">==</span> y<span class="token punctuation">;</span> // use move ownership
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></li> <li><p>Iterators</p> <div class="language-rust line-numbers-mode"><pre class="language-rust"><code><span class="token comment">// Iterator trait</span>
+<span class="token keyword">pub</span> <span class="token keyword">trait</span> <span class="token class-name">Iterator</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Item is the type returned from iterator</span>
+    <span class="token keyword">type</span> <span class="token class-name">Item</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">fn</span> <span class="token function-definition function">next</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">mut</span> <span class="token keyword">self</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token class-name">Option</span><span class="token operator">&lt;</span><span class="token keyword">Self</span><span class="token punctuation">::</span><span class="token class-name">Item</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token attribute attr-name">#[cfg(test)]</span>
+<span class="token keyword">mod</span> <span class="token module-declaration namespace">tests</span> <span class="token punctuation">{</span>
+    <span class="token attribute attr-name">#[test]</span>
+    <span class="token keyword">fn</span> <span class="token function-definition function">iterator_demonstration</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> v1 <span class="token operator">=</span> <span class="token macro property">vec!</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+				<span class="token comment">// creates an iterator over items in v1</span>
+        <span class="token keyword">let</span> <span class="token keyword">mut</span> v1_iter <span class="token operator">=</span> v1<span class="token punctuation">.</span><span class="token function">iter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+				<span class="token comment">// next() change iter internal state</span>
+				<span class="token comment">// .next() value is immutable ref of v1</span>
+        <span class="token macro property">assert_eq!</span><span class="token punctuation">(</span>v1_iter<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token class-name">Some</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token macro property">assert_eq!</span><span class="token punctuation">(</span>v1_iter<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token class-name">Some</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token macro property">assert_eq!</span><span class="token punctuation">(</span>v1_iter<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token class-name">Some</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token macro property">assert_eq!</span><span class="token punctuation">(</span>v1_iter<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token class-name">None</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token comment">// takes ownership of v1 and returns owned values</span>
+				<span class="token keyword">let</span> <span class="token keyword">mut</span> v1_iter <span class="token operator">=</span> v1<span class="token punctuation">.</span><span class="token function">into_iter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token comment">// iterate over mutable refs</span>
+				<span class="token keyword">let</span> <span class="token keyword">mut</span> v1_iter <span class="token operator">=</span> v1<span class="token punctuation">.</span><span class="token function">iter_mut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> v1<span class="token punctuation">:</span> <span class="token class-name">Vec</span><span class="token operator">&lt;</span><span class="token keyword">i32</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token macro property">vec!</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> v2<span class="token punctuation">:</span> <span class="token class-name">Vec</span><span class="token operator">&lt;</span>_<span class="token operator">&gt;</span> <span class="token operator">=</span> v1<span class="token punctuation">.</span><span class="token function">iter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token closure-params"><span class="token closure-punctuation punctuation">|</span>x<span class="token closure-punctuation punctuation">|</span></span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token macro property">assert_eq!</span><span class="token punctuation">(</span>v2<span class="token punctuation">,</span> <span class="token macro property">vec!</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div></li></ol> <h2 id="_10-cargo-crates-io"><a href="#_10-cargo-crates-io" class="header-anchor">#</a> 10. Cargo , crates.io</h2> <div class="language- extra-class"><pre><code>1. Customize your build through release profiles
+
+   ```rust
+   // Cargo.toml
+   // override default settings in diff profiles
+   [profile.dev]
+   opt-level = 0
+
+   [profile.release]
+   opt-level = 3
+   ```
+
+2. Publish libraries on [crates.io](https://crates.io/)
+   1. Documentation comments use three slashes: ///
+   2. Comments describe the entire crate: //! in src/lib.rs
+   3. pub use reexport/reconstruct your project
+3. Organize large projects with workspaces
+   1. workspaces can help manage multiple related packages.
+   2. crates share one target directory.
+4. Install binaries from [crates.io](https://crates.io/)
+5. Extend Cargo using custom commands
+</code></pre></div><h2 id="_11-smart-pointers"><a href="#_11-smart-pointers" class="header-anchor">#</a> 11. Smart Pointers</h2> <div class="language- extra-class"><pre><code>1. Using `Box&lt;T&gt;` to Point to Data on the Heap
+
+   1. Store Data on the Heap
+
+   ```rust
+   fn main() {
+   		// Store an i32 value on the heap using a box
+       let b = Box::new(5);
+       println!(&quot;b = {}&quot;, b);
+   }
+   ```
+
+   1. `Box&lt;T&gt;`provide only the indirection and heap allocation
+
+2. Treating Smart Pointers Like Regular References with the Deref Trait
+
+   1. The Deref trait allows you to customize the behavior of the dereference operator, \*
+
+   ```rust
+   struct MyBox&lt;T&gt;(T);
+
+   impl&lt;T&gt; MyBox&lt;T&gt; {
+       fn new(x: T) -&gt; MyBox&lt;T&gt; {
+           MyBox(x)
+       }
+   }
+
+   use std::ops::Deref;
+
+   impl&lt;T&gt; Deref for MyBox&lt;T&gt; {
+       type Target = T;
+
+       fn deref(&amp;self) -&gt; &amp;T {
+           &amp;self.0
+       }
+   }
+   ```
+
+   2. Deref coercion
+
+3. Running Code on Cleanup with the Drop Trait
+   1. Drop lets you customize what happens when a value is about to go out of scope
+   2. Variables are dropped in the reverse order of their creation
+   3. Force a value to be dropped before the end of its scope: std::mem::drop
+4. Rc, the Reference Couted Smart Pointer
+   1. `Rc&lt;T&gt;` enable multiple ownership
+   2. The`Rc&lt;T&gt;` type keeps track of the number of references to a value:using
+   3. `Rc&lt;T&gt;` is only for use in single-threaded scenarios
+   4. we call `Rc::clone`, the reference count to the data within the `Rc&lt;List&gt;` will increase
+   5. fn `Rc::strong_count` get the reference count.
+   6. the Drop trait decreases the reference count automatically
+   7. `Rc&lt;T&gt;` allows only immutable borrows checked at compile time;
+5. RefCell and the Interior Mutability Pattern
+   1. `RefCell&lt;T&gt;` is only for use in single-threaded scenarios, has single owner.
+   2. the borrowing rules’ invariants are enforced at runtime With `RefCell&lt;T&gt;`
+   3. `RefCell&lt;T&gt;.borrow() ⇒ Ref&lt;T&gt;; RefCell&lt;T&gt;.borrow_mut() ⇒ RefMut&lt;T&gt;`.
+   4. The `RefCell&lt;T&gt;` keeps track of how many `Ref&lt;T&gt;` and `RefMut&lt;T&gt;` smart pointers are currently active.
+   5. Every time we call borrow, the `RefCell&lt;T&gt;` increases its count
+   6. `RefCell&lt;T&gt;` lets us have many immutable borrows or one mutable borrow at any point in time
+6. Reference Cycles Can Leak Memory
+   1. `Rc&lt;T&gt;::downgrade() ⇒ Weak&lt;T&gt;` with weak_count
+   2. `Weak&lt;T&gt;::upgrade() ⇒ Option&lt;Rc&lt;T&gt;&gt;` with strong_count
+</code></pre></div><h2 id="_12-concurrency"><a href="#_12-concurrency" class="header-anchor">#</a> 12. Concurrency</h2> <div class="language- extra-class"><pre><code>1. Using Threads to Run Code
+
+   ```rust
+   let handle = thread::spawn(|| {
+       // do something
+   });
+
+   // block
+   handle.join().unwrap();
+   ```
+
+2. Using Message Passing to Transfer Data Between Threads
+
+   ```rust
+   use std::sync::mpsc;// multiple producer single consumer
+
+   fn main() {
+       let (tx, rx) = mpsc::channel();
+   		let tx1 = mpsc::Sender::clone(&amp;tx);
+   }
+   ```
+
+3. Shared-State Concurrency
+
+   ```rust
+   use std::sync::Mutex;// mutual exclusion
+
+   fn main() {
+       let m = Mutex::new(5);
+
+       {
+           let mut num = m.lock().unwrap();
+           *num = 6;
+       }
+
+       println!(&quot;m = {:?}&quot;, m);
+   }
+
+   // Arc&lt;T&gt; is used in concurrent situations like Rc&lt;T&gt;, a is atomic
+   use std::sync::{Arc, Mutex};
+   use std::thread;
+
+   fn main() {
+       let counter = Arc::new(Mutex::new(0));
+       let mut handles = vec![];
+
+       for _ in 0..10 {
+           let counter = Arc::clone(&amp;counter);
+           let handle = thread::spawn(move || {
+               let mut num = counter.lock().unwrap();
+
+               *num += 1;
+           });
+           handles.push(handle);
+       }
+
+       for handle in handles {
+           handle.join().unwrap();
+       }
+
+       println!(&quot;Result: {}&quot;, *counter.lock().unwrap());
+   }
+
+   // Similarities Between RefCell&lt;T&gt;/Rc&lt;T&gt; and Mutex&lt;T&gt;/Arc&lt;T&gt;
+   ```
+
+4. Extensible Concurrency with the Sync and Send Traits
+</code></pre></div><h2 id="_13-oop"><a href="#_13-oop" class="header-anchor">#</a> 13. OOP</h2> <div class="language- extra-class"><pre><code>1. Characteristics
+2. Using Trait Objects That Allow for Values of Different Types
+3. Implementing an OO Design Pattern
+</code></pre></div><h2 id="_14-patterns-and-matching"><a href="#_14-patterns-and-matching" class="header-anchor">#</a> 14. Patterns and Matching</h2> <div class="language- extra-class"><pre><code>1. All the Places Patterns Can Be Used
+2. Refutability: Whether a Pattern Might Fail to Match
+3. Pattern Syntax
+</code></pre></div><h2 id="_15-advanced-features"><a href="#_15-advanced-features" class="header-anchor">#</a> 15. Advanced Features</h2> <div class="language- extra-class"><pre><code>1. Unsafe Rust
+2. Advanced Traits
+3. Advanced Types
+4. Advanced Functions and Closures
+5. Macros
+6.
+</code></pre></div><h2 id="_16-final-project-building-a-multithreaded-web-server"><a href="#_16-final-project-building-a-multithreaded-web-server" class="header-anchor">#</a> 16. Final Project: Building a Multithreaded Web Server</h2> <h2 id="_17-appendix"><a href="#_17-appendix" class="header-anchor">#</a> 17. Appendix</h2> <div class="language- extra-class"><pre><code>1. A
+2. B
+3. C
+4. D - Useful Development Tools
+
+   ```rust
+   // install rustfmt
+   rustup component add rustfmt
+   // format cargo project
+   cargo fmt
+
+   // use rustfix to fix your code
+   cargo fix
+
+   // lints with Clippy
+   // install
+   rustup component add clippy
+   // run clippy lints
+   cargo clippy
+
+   // Rust Language Server(rls)
+   rustup component add rls
+   ```
+
+5. E
+6. F
+7. G - How Rust is Made and “Nightly Rust”
+
+   ```rust
+   // “stability without stagnation”, Train Schedule
+   nightly: * - - * - - * - - * - - * - - * - * - *
+                        |                         |
+   beta:                * - - - - - - - - *       *
+                                          |
+   stable:                                *
+
+   rustup toolchain install nightly
+   rustup toolchain list
+   rustup override set nightly
+   ```
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/15/2021, 1:06:48 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----><div></div></div></div>
+    <script src="/assets/js/app.e530fad6.js" defer></script><script src="/assets/js/2.154196f3.js" defer></script><script src="/assets/js/23.caed4163.js" defer></script>
+  </body>
+</html>
