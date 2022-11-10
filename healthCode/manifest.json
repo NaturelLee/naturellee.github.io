@@ -3,12 +3,12 @@
   "name": "健康码",
   "icons": [
     {
-      "src": "./common/logo.jpg",
+      "src": "common/logo.jpg",
       "type": "image/jpeg",
       "sizes": "512x512"
     }
   ],
-  "id": "adfsdindex",
+  "id": "ilovexjp-index",
   "start_url": ".",
   "display": "fullscreen",
   "scope": "/",
